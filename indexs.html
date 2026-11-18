@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishchilar boshqaruv tizimi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🏢 ISHCHILAR BOSHQARUV TIZIMI</h1>
+    <p>Korxona xodimlari ma'lumotlari</p>
+</header>
+
+<div class="container">
+
+    <div class="form-box">
+        <h2>➕ Yangi ishchi qo‘shish</h2>
+
+        <form id="workerForm">
+
+            <div class="input-group">
+                <label>Ismi</label>
+                <input type="text" id="firstName"
+                placeholder="Ismini yozing" required>
+            </div>
+
+            <div class="input-group">
+                <label>Familiyasi</label>
+                <input type="text" id="lastName"
+                placeholder="Familiyasini yozing" required>
+            </div>
+
+            <div class="input-group">
+                <label>Yoshi</label>
+                <input type="number" id="age"
+                placeholder="Yoshini yozing" min="1" max="120" required>
+            </div>
+
+            <div class="input-group">
+                <label>Tug‘ilgan sana</label>
+                <input type="date" id="birth" required>
+            </div>
+
+            <div class="input-group">
+                <label>Yashash tumani</label>
+                <input type="text" id="district"
+                placeholder="Masalan: Chilonzor" required>
+            </div>
+
+            <div class="input-group">
+                <label>Lavozimi</label>
+                <input type="text" id="job"
+                placeholder="Lavozimini yozing" required>
+            </div>
+
+            <button type="submit">+ Ishchini qo‘shish</button>
+
+        </form>
+    </div>
+
+    <div class="table-box">
+        <h2>📋 Ishchilar ro‘yxati</h2>
+
+        <div class="table-scroll">
+            <table>
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Ism</th>
+                        <th>Familiya</th>
+                        <th>Yosh</th>
+                        <th>Tug‘ilgan sana</th>
+                        <th>Tuman</th>
+                        <th>Lavozim</th>
+                        <th>Amal</th>
+                    </tr>
+                </thead>
+
+                <tbody id="workerList"></tbody>
+            </table>
+        </div>
+
+        <p id="emptyMessage">Hozircha ishchilar yo‘q.</p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Ishchilar boshqaruv tizimi
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
