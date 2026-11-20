@@ -19,12 +19,12 @@ header {
 }
 
 header h1 {
-    font-size: 28px;
     margin-bottom: 12px;
+    font-size: 28px;
 }
 
 .container {
-    max-width: 1250px;
+    max-width: 1400px;
     margin: 35px auto;
     padding: 0 20px;
 }
@@ -45,24 +45,19 @@ h2 {
 form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.input-group {
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
+    gap: 15px;
 }
 
 label {
     font-weight: bold;
+    align-self: center;
 }
 
 input {
-    padding: 14px;
+    width: 100%;
+    padding: 13px;
     border: 1px solid #cbd5e1;
     border-radius: 9px;
-    font-size: 15px;
     outline: none;
 }
 
@@ -71,15 +66,13 @@ input:focus {
 }
 
 button {
-    padding: 14px;
     border: none;
-    border-radius: 9px;
+    padding: 12px 15px;
+    border-radius: 8px;
     background: #2563eb;
     color: white;
-    font-size: 15px;
-    font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
+    font-weight: bold;
 }
 
 form button {
@@ -87,7 +80,15 @@ form button {
 }
 
 button:hover {
-    background: #123c69;
+    opacity: 0.85;
+}
+
+.cancel-btn {
+    background: #64748b;
+}
+
+[hidden] {
+    display: none !important;
 }
 
 .table-scroll {
@@ -97,7 +98,7 @@ button:hover {
 table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 900px;
+    min-width: 1100px;
 }
 
 thead {
@@ -106,7 +107,7 @@ thead {
 }
 
 th, td {
-    padding: 15px;
+    padding: 14px;
     text-align: left;
     border-bottom: 1px solid #e2e8f0;
 }
@@ -115,19 +116,21 @@ tbody tr:hover {
     background: #eff6ff;
 }
 
+.worker-photo {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #e2e8f0;
+}
+
+.edit-btn {
+    background: #16a36a;
+    margin-right: 5px;
+}
+
 .delete-btn {
     background: #dc2626;
-    padding: 9px 12px;
-}
-
-.delete-btn:hover {
-    background: #991b1b;
-}
-
-#emptyMessage {
-    text-align: center;
-    color: #94a3b8;
-    margin-top: 20px;
 }
 
 footer {
@@ -135,6 +138,12 @@ footer {
     color: white;
     text-align: center;
     padding: 25px;
+}
+
+#emptyMessage {
+    text-align: center;
+    color: #94a3b8;
+    margin-top: 20px;
 }
 
 @media(max-width: 650px) {

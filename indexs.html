@@ -11,57 +11,46 @@
 
 <header>
     <h1>🏢 ISHCHILAR BOSHQARUV TIZIMI</h1>
-    <p>Korxona xodimlari ma'lumotlari</p>
+    <p>Korxona xodimlari boshqaruvi</p>
 </header>
 
-<div class="container">
+<main class="container">
 
-    <div class="form-box">
-        <h2>➕ Yangi ishchi qo‘shish</h2>
+    <section class="form-box">
+        <h2 id="formTitle">➕ Yangi ishchi qo‘shish</h2>
 
         <form id="workerForm">
 
-            <div class="input-group">
-                <label>Ismi</label>
-                <input type="text" id="firstName"
-                placeholder="Ismini yozing" required>
-            </div>
+            <label>Ishchi rasmi</label>
+            <input type="file" id="photo" accept="image/*">
 
-            <div class="input-group">
-                <label>Familiyasi</label>
-                <input type="text" id="lastName"
-                placeholder="Familiyasini yozing" required>
-            </div>
+            <label>Ismi</label>
+            <input type="text" id="firstName" placeholder="Ismini yozing" required>
 
-            <div class="input-group">
-                <label>Yoshi</label>
-                <input type="number" id="age"
-                placeholder="Yoshini yozing" min="1" max="120" required>
-            </div>
+            <label>Familiyasi</label>
+            <input type="text" id="lastName" placeholder="Familiyasini yozing" required>
 
-            <div class="input-group">
-                <label>Tug‘ilgan sana</label>
-                <input type="date" id="birth" required>
-            </div>
+            <label>Yoshi</label>
+            <input type="number" id="age" min="1" max="120" placeholder="Yoshi" required>
 
-            <div class="input-group">
-                <label>Yashash tumani</label>
-                <input type="text" id="district"
-                placeholder="Masalan: Chilonzor" required>
-            </div>
+            <label>Tug‘ilgan sana</label>
+            <input type="date" id="birth" required>
 
-            <div class="input-group">
-                <label>Lavozimi</label>
-                <input type="text" id="job"
-                placeholder="Lavozimini yozing" required>
-            </div>
+            <label>Yashash tumani</label>
+            <input type="text" id="district" placeholder="Masalan: Chilonzor" required>
 
-            <button type="submit">+ Ishchini qo‘shish</button>
+            <label>Lavozimi</label>
+            <input type="text" id="job" placeholder="Lavozimi" required>
+
+            <button type="submit" id="submitBtn">+ Ishchini qo‘shish</button>
+            <button type="button" id="cancelBtn" class="cancel-btn" hidden>
+                Bekor qilish
+            </button>
 
         </form>
-    </div>
+    </section>
 
-    <div class="table-box">
+    <section class="table-box">
         <h2>📋 Ishchilar ro‘yxati</h2>
 
         <div class="table-scroll">
@@ -69,13 +58,14 @@
                 <thead>
                     <tr>
                         <th>№</th>
+                        <th>Rasm</th>
                         <th>Ism</th>
                         <th>Familiya</th>
                         <th>Yosh</th>
                         <th>Tug‘ilgan sana</th>
                         <th>Tuman</th>
                         <th>Lavozim</th>
-                        <th>Amal</th>
+                        <th>Amallar</th>
                     </tr>
                 </thead>
 
@@ -83,10 +73,10 @@
             </table>
         </div>
 
-        <p id="emptyMessage">Hozircha ishchilar yo‘q.</p>
-    </div>
+        <p id="emptyMessage">Hozircha ishchilar mavjud emas.</p>
+    </section>
 
-</div>
+</main>
 
 <footer>
     © 2026 Ishchilar boshqaruv tizimi
